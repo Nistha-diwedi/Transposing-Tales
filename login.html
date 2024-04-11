@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-storage.js"></script>
+    <link rel="stylesheet" href="styles/Contact.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="color: white; margin-bottom: 40px; margin-left: 5px;">Create your free account today & Give it a try
+            !</h1>
+        <div class="contact-box">
+            <div class="contact-left">
+                <h3 class="gradienttext">Login in your account</h3><br>
+
+
+                <form id="loginForm">
+                    <div class="input-row">
+                        <div class="input-group">
+                            <label>Name</label>
+                            <input required type="text" placeholder="Enter your name" name="name">
+                        </div>
+                        <div class="input-group">
+                            <label>Phone</label>
+                            <input required type="text" pattern="[0-9]{10}"
+                                oninput="this.value = this.value.slice(0, 10)"
+                                placeholder="Enter your 10-digit Phone number" name="phone">
+
+                        </div>
+                        <div class="input-group">
+                            <label>Email</label>
+                            <input required type="email" placeholder="Enter your Email" name="email">
+                        </div>
+                    </div>
+                    <button type="submit">LOGIN / SIGNUP</button>
+                </form>
+
+
+            </div>
+            <div class="contact-right">
+                <h3 class="gradienttext">Reach Us</h3>
+                <table>
+                    <tr>
+                        <td>Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </td>
+                        <td>transposingtales@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Phone &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </td>
+                        <td>+1 012 345 6789</td>
+                    </tr>
+                    <tr>
+                        <td>Address &nbsp;&nbsp;: </td>
+                        <td>Sharda University</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/user.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.7/firebase-storage.js"></script>
+
+    <title>Transposing Tales</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+    <center>
+        <nav>
+            <p>TRANSPOSING TALES</p>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li onclick="showuserhistorywithdetails()"><i class="fas fa-user"></i></li>
+            </ul>
+        </nav>
+    </center>
+
+
+    <p id="userdetailsdisplay"></p>
+
+    <div class="searchhistory">
+        <center><h2>Search History</h2></center>
+        <button class="closebutton" onclick="closethehistorybox()"><i class="fas fa-x"></i></button>
+        <br>
+        <hr><br>
+    </div>
+
+
+    <div class="container">
+        <div class="content">
+            <iframe src="" id="ytIframe" frameborder="0"></iframe>
+            <div class="inputbyuser">
+                <input type="text" id="queryInput" placeholder="Enter Your Prompt">
+                <input style="display: none;" type="text" id="systemPromptInput"
+                    placeholder="Enter a system prompt (optional)" style="width: 25%;"
+                    value="User Will Give You A Prompt Of Book Title along with language And You Have To Create a point wise summary of '500 words' strictly having '10 words' in a single point and Lyrics On Basis Of The Book's Genres in user inputted language. \n">
+                <button type="submit" class="send" onclick="sendQuery()">Generate</button>
+            </div>
+            <pre class="genresresponse" id="genresresponseoutput"></pre>
+            <pre class="response" id="responseOutput"></pre>
+        </div>
+    </div>
+
+    <script src="scripts/app.js"></script>
+
+    <script>
+        var userdetailsdisplay = document.getElementById('userdetailsdisplay');
+        userdetailsdisplay.innerText = '👋 HI THERE , ' + localStorage.getItem('nameofuser');
+
+
+        function closethehistorybox() {
+            var searchhistory = document.querySelector('.searchhistory');
+            searchhistory.style.display = 'none';
+        }
+
+        function showuserhistorywithdetails() {
+            var searchhistory = document.querySelector('.searchhistory');
+            searchhistory.style.display = 'block';
+        }
+
+
+    </script>
+</body>
+
+</html>

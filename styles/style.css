@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'googlesans';
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "googlesans";
+    background: #020013;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+}
+
+@font-face {
+    font-family: 'googlesans';
+    src: url('../fonts/google-sans.woff2');
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: white;
+}
+
+::-webkit-scrollbar-thumb {
+    background: salmon;
+    background-size: cover;
+    border-radius: 2px;
+    border: none;
+}
+
+.container {
+    width: 89%;
+    height: max-content;
+    padding: 20px 20px;
+    border: 2px solid white;
+    margin-top: 190px;
+    border-radius: 5px;
+}
+
+.genresresponse{
+    width: 619px;
+    height: 50px;
+    margin-top: 20px;
+    padding: 20px 20px;
+    border-radius: 5px;
+    overflow: auto;
+    border: 2px solid white;
+    font-family: "googlesans";
+}
+
+.response {
+    width: 619px;
+    height: 300px;
+    margin-top: 20px;
+    padding: 20px 20px;
+    border-radius: 5px;
+    overflow: auto;
+    border: 2px solid white;
+    font-family: "googlesans";
+}
+
+strong {
+    font-weight: bold;
+    font-family: "googlesans";
+}
+
+nav {
+    width: 90%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+    border: 2px solid white;
+    border-radius: 50px;
+    position: fixed;
+    top: 40px;
+    left: 80px;
+    z-index: 100;
+    background: #ffffff0b;
+    backdrop-filter: blur(5px);
+}
+
+nav p {
+    font-size: 35px;
+    font-weight: 600;
+    float: left;
+    display: flex;
+    margin-left: 50px;
+    -webkit-text-fill-color: transparent;
+    background: linear-gradient(107deg, #d86ae2 10.76%, #cd65e3 0, #6b3ced 61.63%, #221df4 88.29%);
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+nav ul {
+    float: right;
+    list-style: none;
+    width: 65%;
+    text-align: right;
+}
+
+nav ul li {
+    font-size: 27px;
+    display: inline-block;
+    margin: 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+nav li a:hover {
+    color: salmon;
+}
+
+nav li i{
+    color: #ffc3ff;
+    cursor: pointer;
+}
+
+nav li i:hover{
+    color: salmon;
+}
+
+
+
+
+
+.searchhistory{
+    width: 400px;
+    height: 500px;
+    padding: 20px;
+    border-radius: 20px;
+    position: absolute;
+    background: white;
+    z-index: 1000;
+    display: none;
+}
+
+.searchhistory .closebutton{
+    width: 45px;
+    height: 45px;
+    font-size: 23px;
+    color: red;
+    float: right;
+    margin-top: -35px;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+}
+
+.searchhistory p{
+    font-family: 'poppins';
+    overflow-x: scroll;
+    margin-bottom: 5px;
+}
+
+
+
+
+#userdetailsdisplay{
+    color: #fff;
+    position: absolute;
+    top: 21%;
+}
+
+.content {
+    color: #fff;
+    max-width: 620px;
+}
+
+.content iframe{
+    position: absolute;
+    right: 150px;
+    margin-top: 78px;
+    width: 600px;
+    height: 300px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.content .inputbyuser {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.104);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.content .inputbyuser input {
+    border: 0;
+    outline: 0;
+    width: 100%;
+    font-size: 16px;
+    padding-left: 10px;
+    color: white;
+    background: transparent;
+}
+
+.content .inputbyuser .send {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    background: #7d1a7d;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.content .inputbyuser .send:active {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    background: #ffc3ff;
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+}
